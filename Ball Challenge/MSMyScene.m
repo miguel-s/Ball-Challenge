@@ -14,16 +14,15 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
+        //background
+        self.backgroundColor = [SKColor whiteColor];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+        //lower edge
+        SKNode *sceneEdge = [[SKNode alloc] init];
+        sceneEdge.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
+        sceneEdge.position = CGPointZero;
+        [self addChild:sceneEdge];
         
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
     }
     return self;
 }
@@ -32,22 +31,78 @@
     /* Called when a touch begins */
     
     for (UITouch *touch in touches) {
+        
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
+        int random = arc4random_uniform(3);
+        switch (random) {
+            case 0:
+                [self addSoccerBallAtLocation:location];
+                break;
+            case 1:
+                [self addBeachBallAtLocation:location];
+                break;
+            case 2:
+                [self add8BallAtLocation:location];
+                break;
+            default:
+                break;
+        }
     }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+}
+
+#pragma mark - Helper Methods
+
+- (void)addSoccerBallAtLocation:(CGPoint)location {
+    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"SoccerBall"];
+    sprite.position = location;
+    
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:25.0];
+    sprite.physicsBody.angularDamping = 1.0;
+    sprite.physicsBody.angularVelocity = 1.0;
+    sprite.physicsBody.density = 1.0;
+    sprite.physicsBody.friction = 1.0;
+    sprite.physicsBody.linearDamping = 1.0;
+    sprite.physicsBody.mass = 1.0;
+    sprite.physicsBody.restitution = 1.0;
+    
+    [self addChild:sprite];
+}
+
+- (void)addBeachBallAtLocation:(CGPoint)location {
+    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"BeachBall"];
+    sprite.position = location;
+    
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:50.0];
+    sprite.physicsBody.angularDamping = 0.5;
+    sprite.physicsBody.angularVelocity = 0.5;
+    sprite.physicsBody.density = 0.5;
+    sprite.physicsBody.friction = 0.5;
+    sprite.physicsBody.linearDamping = 0.5;
+    sprite.physicsBody.mass = 0.5;
+    sprite.physicsBody.restitution = 0.5;
+    
+    [self addChild:sprite];
+}
+
+- (void)add8BallAtLocation:(CGPoint)location {
+    SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"8Ball"];
+    sprite.position = location;
+    
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:20.0];
+    sprite.physicsBody.angularDamping = 0.0;
+    sprite.physicsBody.angularVelocity = 0.0;
+    sprite.physicsBody.density = 0.0;
+    sprite.physicsBody.friction = 0.0;
+    sprite.physicsBody.linearDamping = 0.0;
+    sprite.physicsBody.mass = 0.0;
+    sprite.physicsBody.restitution = 0.0;
+    
+    [self addChild:sprite];
 }
 
 @end

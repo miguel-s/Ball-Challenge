@@ -17,13 +17,15 @@
 		396337391950CA6C000980F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 396337371950CA6C000980F2 /* Main.storyboard */; };
 		3963373C1950CA6C000980F2 /* MSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3963373B1950CA6C000980F2 /* MSViewController.m */; };
 		3963373F1950CA6C000980F2 /* MSMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3963373E1950CA6C000980F2 /* MSMyScene.m */; };
-		396337411950CA6C000980F2 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 396337401950CA6C000980F2 /* Spaceship.png */; };
 		396337431950CA6C000980F2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 396337421950CA6C000980F2 /* Images.xcassets */; };
 		3963374A1950CA6C000980F2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396337491950CA6C000980F2 /* XCTest.framework */; };
 		3963374B1950CA6C000980F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396337231950CA6C000980F2 /* Foundation.framework */; };
 		3963374C1950CA6C000980F2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 396337271950CA6C000980F2 /* UIKit.framework */; };
 		396337541950CA6C000980F2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 396337521950CA6C000980F2 /* InfoPlist.strings */; };
 		396337561950CA6C000980F2 /* Ball_ChallengeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 396337551950CA6C000980F2 /* Ball_ChallengeTests.m */; };
+		396337631950E4FF000980F2 /* 8Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396337601950E4FF000980F2 /* 8Ball@2x.png */; };
+		396337641950E4FF000980F2 /* BeachBall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396337611950E4FF000980F2 /* BeachBall@2x.png */; };
+		396337671950E523000980F2 /* SoccerBall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 396337661950E523000980F2 /* SoccerBall@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +55,15 @@
 		3963373B1950CA6C000980F2 /* MSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSViewController.m; sourceTree = "<group>"; };
 		3963373D1950CA6C000980F2 /* MSMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSMyScene.h; sourceTree = "<group>"; };
 		3963373E1950CA6C000980F2 /* MSMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSMyScene.m; sourceTree = "<group>"; };
-		396337401950CA6C000980F2 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		396337421950CA6C000980F2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		396337481950CA6C000980F2 /* Ball ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ball ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		396337491950CA6C000980F2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		396337511950CA6C000980F2 /* Ball ChallengeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ball ChallengeTests-Info.plist"; sourceTree = "<group>"; };
 		396337531950CA6C000980F2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		396337551950CA6C000980F2 /* Ball_ChallengeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ball_ChallengeTests.m; sourceTree = "<group>"; };
+		396337601950E4FF000980F2 /* 8Ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8Ball@2x.png"; sourceTree = "<group>"; };
+		396337611950E4FF000980F2 /* BeachBall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BeachBall@2x.png"; sourceTree = "<group>"; };
+		396337661950E523000980F2 /* SoccerBall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SoccerBall@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +132,8 @@
 				3963373B1950CA6C000980F2 /* MSViewController.m */,
 				3963373D1950CA6C000980F2 /* MSMyScene.h */,
 				3963373E1950CA6C000980F2 /* MSMyScene.m */,
-				396337401950CA6C000980F2 /* Spaceship.png */,
 				396337421950CA6C000980F2 /* Images.xcassets */,
+				3963375F1950E4FF000980F2 /* Assets */,
 				3963372C1950CA6C000980F2 /* Supporting Files */,
 			);
 			path = "Ball Challenge";
@@ -162,6 +166,17 @@
 				396337521950CA6C000980F2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3963375F1950E4FF000980F2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				396337601950E4FF000980F2 /* 8Ball@2x.png */,
+				396337611950E4FF000980F2 /* BeachBall@2x.png */,
+				396337661950E523000980F2 /* SoccerBall@2x.png */,
+			);
+			name = Assets;
+			path = "ball-challenge-assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,9 +256,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				396337641950E4FF000980F2 /* BeachBall@2x.png in Resources */,
+				396337631950E4FF000980F2 /* 8Ball@2x.png in Resources */,
 				396337301950CA6C000980F2 /* InfoPlist.strings in Resources */,
 				396337431950CA6C000980F2 /* Images.xcassets in Resources */,
-				396337411950CA6C000980F2 /* Spaceship.png in Resources */,
+				396337671950E523000980F2 /* SoccerBall@2x.png in Resources */,
 				396337391950CA6C000980F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
