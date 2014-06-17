@@ -20,7 +20,6 @@
         //lower edge
         SKNode *sceneEdge = [[SKNode alloc] init];
         sceneEdge.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
-        sceneEdge.position = CGPointZero;
         [self addChild:sceneEdge];
         
     }
@@ -61,14 +60,10 @@
     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"SoccerBall"];
     sprite.position = location;
     
-    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:25.0];
-    sprite.physicsBody.angularDamping = 1.0;
-    sprite.physicsBody.angularVelocity = 1.0;
-    sprite.physicsBody.density = 1.0;
-    sprite.physicsBody.friction = 1.0;
-    sprite.physicsBody.linearDamping = 1.0;
-    sprite.physicsBody.mass = 1.0;
-    sprite.physicsBody.restitution = 1.0;
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:sprite.size.width * 0.5];
+    sprite.physicsBody.mass = 0.4;
+    sprite.physicsBody.restitution = 0.5;
+    sprite.physicsBody.angularVelocity = 20.0;
     
     [self addChild:sprite];
 }
@@ -77,14 +72,11 @@
     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"BeachBall"];
     sprite.position = location;
     
-    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:50.0];
-    sprite.physicsBody.angularDamping = 0.5;
-    sprite.physicsBody.angularVelocity = 0.5;
-    sprite.physicsBody.density = 0.5;
-    sprite.physicsBody.friction = 0.5;
-    sprite.physicsBody.linearDamping = 0.5;
-    sprite.physicsBody.mass = 0.5;
-    sprite.physicsBody.restitution = 0.5;
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:sprite.size.width * 0.5];
+    sprite.physicsBody.mass = 0.1;
+    sprite.physicsBody.restitution = 0.8;
+    sprite.physicsBody.friction = 0.0;
+    sprite.physicsBody.linearDamping = 0.0;
     
     [self addChild:sprite];
 }
@@ -93,14 +85,9 @@
     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"8Ball"];
     sprite.position = location;
     
-    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:20.0];
-    sprite.physicsBody.angularDamping = 0.0;
-    sprite.physicsBody.angularVelocity = 0.0;
-    sprite.physicsBody.density = 0.0;
-    sprite.physicsBody.friction = 0.0;
-    sprite.physicsBody.linearDamping = 0.0;
-    sprite.physicsBody.mass = 0.0;
-    sprite.physicsBody.restitution = 0.0;
+    sprite.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:sprite.size.width * 0.5];
+    sprite.physicsBody.mass = 0.8;
+    sprite.physicsBody.restitution = 0.2;
     
     [self addChild:sprite];
 }
